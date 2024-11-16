@@ -174,7 +174,6 @@ footer {
   background-color: rgba(255, 152, 108, 0.25);
   display: flex;
   justify-content: space-between;
-  gap: 80px;
   padding: 64px 80px;
 }
 footer img,
@@ -240,5 +239,7 @@ footer p a {
   }
   footer {
     flex-direction: column;
+    display: flex;
+    justify-content: space-between;
   }
 }
