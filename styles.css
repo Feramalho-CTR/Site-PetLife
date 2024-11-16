@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  color: #263138;
+}
+/* Cabeçalho */
+header {
+  background-color: #FF9A6C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 80px;
+  padding-right: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+header .logo {
+  cursor: pointer;
+}
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+header nav a {
+  margin-left: 32px;
+  padding: 8px 16px;
+  width: fit-content;
+}
+header nav a:hover {
+  transition: 0.3s;
+  box-shadow: 0px 4px 8px rgba(155, 86, 46, 0.25);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #FF9A6C;
+  background-color: #ffffff;
+  
+}
+
+/* Seção inicial */
+#inicio {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 80px 128px 80px;
+  position: relative;
+}
+h1, h2 {
+  font-weight: bold;
+  color: #263138;
+}
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+.paragrafo {
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+.button {
+  color: #FF725E;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+.button-transparent {
+  color: #FF725E;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+.button:hover {
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  background-color: #FF725E;
+  color: #FFFFFF;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+}
+
+/* Seção da clínica */
+#clinica {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 80px;
+}
+#clinica li {
+  margin-bottom: 16px;
+  margin-left: 32px;
+}
+
+/* Seção da farmácia */
+#farmacia {
+  align-items: center;
+  padding: 64px 80px;
+  text-align: center;
+}
+#farmacia img {
+  margin: 64 auto;
+}
+#farmacia .paragrafo {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Seção de duvidas */
+#duvidas {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 80px;
+}
+.duvida {
+  position: relative;
+}
+.duvida h3 {
+  border: 2px solid #FF725E;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  padding: 24px;
+  transition: .2s;
+}
+.duvida h3:hover {
+  background-color: #FF725E;
+  color: #FFFFFF;
+  transition: .2s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.duvida img {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
+.duvida .paragrafo {
+  border-right: 1px solid #FF725E;
+  border-bottom: 1px solid #FF725E;
+  border-left: 1px solid #FF725E;
+  border-radius: 0 0 8px 8px;
+  margin-top: -8px;
+  padding: 0 24px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: .2s;
+}
+.duvida.ativa .paragrafo {
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+}
+/* Rodapé */
+footer {
+  background-color: rgba(255, 152, 108, 0.25);
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 64px 80px;
+}
+footer img,
+footer .titulo {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+footer div a {
+  color: #263138;
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+footer div a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+footer p {
+  margin-bottom: 16px;
+  max-width: 350px;
+}
+footer p a {
+  color: #263138;
+  text-decoration: none;
+}
+.copyright {
+  background-color: #263138;
+  color: #FFFFFF;
+  padding: 24px;
+  text-align: center;
+}
+.copyright a {
+  color: #FF9A6C;
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 32px;
+  }
+  header nav {
+    flex-direction: column;
+  }
+  header nav a {
+    margin-left: 0;
+  }
+  #inicio {
+    flex-direction: column;
+    gap: 32px;
+  }
+  #clinica {
+    flex-direction: column;  
+  }
+  #farmacia {
+    flex-direction: column;
+  }
+  #duvidas {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
