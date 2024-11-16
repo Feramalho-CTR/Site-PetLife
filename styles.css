@@ -175,6 +175,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 64px 80px;
+  gap: 64px;
 }
 footer img,
 footer .titulo {
